@@ -1,0 +1,73 @@
+@use "sass:color";
+.summary-tool {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+
+        &_title {
+            font-size: 2rem; // khoảng 30px
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        &_paragraph {
+            font-size: 1.25rem; // khoảng 20px
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+    }
+
+    // Styling cho Form của Ant Design
+    form {
+        background: #f7f7f7;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+
+        .ant-form-item {
+            margin-bottom: 16px;
+            font-size: 2rem;
+        }
+
+        .ant-btn-primary {
+            background-color: #1890ff;
+            border-color: #1890ff;
+            font-size: 1rem;
+            padding: 6px 20px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: color.adjust(#1890ff, $lightness: -5%);
+                border-color: color.adjust(#1890ff, $lightness: -5%);
+            }
+        }
+    }
+
+    // Styling cho khu vực kết quả
+    .result-area {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #444;
+            line-height: 1.6;
+        }
+    }
+}
