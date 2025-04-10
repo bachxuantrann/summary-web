@@ -16,7 +16,7 @@ const KeyWordPage = () => {
         }
         try {
             setLoading(true);
-            const res = await axios.post("/api/summary", values, {
+            const res = await axios.post("http://127.0.0.1:8000/summarize", values, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             setResult(res.data.keywords);
@@ -44,7 +44,7 @@ const KeyWordPage = () => {
         formData.append("file", file);
         try {
             setLoading(true);
-            const res = await axios.post("/api/summary-docx", formData, {
+            const res = await axios.post("http://127.0.0.1:8000/summarize", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             setResult(res.data.keywords);
