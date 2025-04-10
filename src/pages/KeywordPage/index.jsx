@@ -3,6 +3,8 @@ import { Form, Input, Select, Button, Upload, message, Typography } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import axios from "axios";
 import "./style.scss";
+const { Title, Paragraph } = Typography;
+const { TextArea } = Input;
 const KeyWordPage = () => {
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
