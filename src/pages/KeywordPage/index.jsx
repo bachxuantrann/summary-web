@@ -111,7 +111,7 @@ const KeyWordPage = () => {
                     >
                         <TextArea
                             rows={10}
-                            placeholder="Copy và dán văn bản cần tóm tắt vào ô này"
+                            placeholder="Copy và dán văn bản cần trích xuất từ khóa tại đây"
                         />
                     </Form.Item>
                     <Form.Item>
@@ -120,7 +120,7 @@ const KeyWordPage = () => {
                             htmlType="submit"
                             loading={loading}
                         >
-                            Tóm Tắt
+                            Trích xuất từ khóa
                         </Button>
                     </Form.Item>
                 </Form>
@@ -129,7 +129,7 @@ const KeyWordPage = () => {
                     <div className="result-area">
                         <h3>Kết quả các từ khóa được trích xuất</h3>
                         <ul>
-                            {result.data.keywords.map((keyword, index) => {
+                            {result.map((keyword, index) => {
                                 <li key={index}>{keyword}</li>;
                             })}
                         </ul>
