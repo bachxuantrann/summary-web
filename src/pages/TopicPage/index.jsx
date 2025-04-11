@@ -138,7 +138,7 @@ const TopicPage = () => {
                         <h3>Kết quả các chủ đề trích xuất </h3>
                         <ul>
                             {result.map((topic) => (
-                                <li>{topic}</li>
+                                <li>{topic.label}</li>
                             ))}
                         </ul>
                     </div>
