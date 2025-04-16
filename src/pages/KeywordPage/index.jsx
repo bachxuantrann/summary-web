@@ -17,7 +17,7 @@ const KeyWordPage = () => {
         try {
             setLoading(true);
             const res = await axios.post(
-                "http://127.0.0.1:8000/summarize",
+                "http://127.0.0.1:8000/keywords",
                 values,
                 {
                     headers: { "Content-Type": "multipart/form-data" },
@@ -49,7 +49,7 @@ const KeyWordPage = () => {
         try {
             setLoading(true);
             const res = await axios.post(
-                "http://127.0.0.1:8000/summarize",
+                "http://127.0.0.1:8000/keywords",
                 formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" },

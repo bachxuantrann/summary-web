@@ -16,7 +16,7 @@ const SummaryText = () => {
         }
         try {
             setLoading(true);
-            const res = await axios.post("http://127.0.0.1:8000/summarize", values,{
+            const res = await axios.post("http://127.0.0.1:8000/summary", values,{
                 headers: { "Content-Type": "multipart/form-data" },
             });
             setResult(res.data.summary);
@@ -44,7 +44,7 @@ const SummaryText = () => {
         formData.append("file", file);
         try {
             setLoading(true);
-            const res = await axios.post("http://127.0.0.1:8000/summarize", formData, {
+            const res = await axios.post("http://127.0.0.1:8000/summary", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
             });
             setResult(res.data.summary);
